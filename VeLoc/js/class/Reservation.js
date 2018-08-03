@@ -29,6 +29,7 @@ class Reservation
 
             notify("normal", "top", "right", "Votre réservation a bien été effectué !");
         }
+        
         // on récupère les objets station et marqueur
         let mark = mapInfos.markers.find(obj => obj.id == this.id);
         let station = mapInfos.markersInfos.find(obj => obj.number == mark.id);

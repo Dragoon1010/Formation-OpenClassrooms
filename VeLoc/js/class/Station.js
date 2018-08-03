@@ -54,8 +54,11 @@ class Station
         let date = new Date(this.lastUpdate);
 
         // bouton pour fermer le panel
-        $("#close-reservation-panel").on("click touchstart", function()
+        $("#close-reservation-panel").on("click touchstart", function(e)
         {
+            if (e.type === "touchstart")
+                enableScroll();
+
             $("#reservation-body").hide();
         });
 
@@ -98,11 +101,15 @@ class Station
             }
         }, 1000);
 
-        $("#reserver").on("click touchstart", function()
+        $("#reserver").on("click touchstart", function(e)
         {
+            if (e.type === "touchstart")
+                disableScroll();
+
             // on demande la création du canvas (pour réninitialisé si il a déjà été créé)
             let canvas = new Canvas("250px", "150px", null);
             canvas.drawSignature();
+            
         });
     }
 }

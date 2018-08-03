@@ -4,6 +4,29 @@ $break-large: 1200px;
 
 @media (max-width: $break-medium) 
 {
+    header 
+    {
+        #logo 
+        {
+            font-size: 4vw;
+        }
+        
+        #slideshow
+        {
+            height: 42vw;
+
+            .slide.active
+            {
+                figcaption
+                {
+                    width: 98%;
+                    display: block;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
     #body-content #main #legend-body, 
     #body-content #main #station-infos 
     {
@@ -35,6 +58,14 @@ $break-large: 1200px;
 
 @media (max-width: $break-small) 
 {
+    header 
+    {
+        #slideshow
+        {
+            height: 50vw;
+        }
+    }
+
     .notification 
     {
         width: 96%;

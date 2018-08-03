@@ -63,3 +63,15 @@ function testLocalStorage(type)
         return false;
     }
 }
+
+// fonction qui désactive le scroll
+function disableScroll(){
+    let x = window.scrollX;
+    let y = window.scrollY;
+    window.onscroll = function() { window.scrollTo(x, y); };
+}
+
+// fonction qui réactive le scroll
+function enableScroll(){
+    window.onscroll = function() {};
+}

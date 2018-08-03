@@ -110,6 +110,9 @@ class Canvas
                 );
                 
                 reservation.update(true);
+
+                if (e.type === "touchstart")
+                    enableScroll();
             }
         });
     }

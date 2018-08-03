@@ -27,18 +27,27 @@ class Slider
         this.images.forEach(img => {
             number++;
 
-            // on créé l'image, avec les bon attributs
-            let $imgElt = $((document).createElement("img")).attr({
-                src: img,
-                class: "slide img-fluid",
+
+            let $figureElt = $(document.createElement("figure")).attr({
+                class: "slide",
                 id: number
             });
+            
+            // on créé l'image, avec les bon attributs
+            let $imgElt = $(document.createElement("img")).attr({
+                src: img.src
+                //class: "img-fluid",
+            });
+
+            let $figcaptionElt = $(document.createElement("figcaption")).text(img.text);
 
             // on créé les selector
-            let $dotSelector = $((document).createElement("li")).attr("id", "dot-" + number).addClass("selector").text("\uf111");
+            let $dotSelector = $(document.createElement("li")).attr("id", "dot-" + number).addClass("selector").text("\uf111");
 
             // on injecte les images et les selectors
-            $sliderElt.append($imgElt);
+            $sliderElt.append($figureElt)
+            $figureElt.append($imgElt);
+            $figureElt.append($figcaptionElt);
             $sliderSelectorElt.append($dotSelector);
         });
 

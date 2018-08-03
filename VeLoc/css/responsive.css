@@ -1,4 +1,15 @@
 @media (max-width: 991px) {
+  header #logo {
+    font-size: 4vw;
+  }
+  header #slideshow {
+    height: 42vw;
+  }
+  header #slideshow .slide.active figcaption {
+    width: 98%;
+    display: block;
+    text-align: left;
+  }
   #body-content #main #legend-body,
   #body-content #main #station-infos {
     position: relative;
@@ -22,6 +33,9 @@
 }
 
 @media (max-width: 576px) {
+  header #slideshow {
+    height: 50vw;
+  }
   .notification {
     width: 96%;
   }

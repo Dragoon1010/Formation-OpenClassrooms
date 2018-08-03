@@ -14,11 +14,11 @@ $(document).ready(function()
         imgWidth, 
         imgHeight,
         "header",
-        ["img/slider/slide1.png",
-        "img/slider/slide2.png",
-        "img/slider/slide3.png",
-        "img/slider/slide4.png",
-        "img/slider/slide5.png"]
+        [ { src: "img/slider/slide1.png", text: "Les marqueurs montrent le nombre de station disponible. Cliquez sur un marqueur pour zoomer." },
+        { src: "img/slider/slide2.png", text: "La couleur de fond des marqueurs informe sur l'ouverture ou non d'une station/ La couleur du vélo informe sur la disponibilité ou non d'un vélo." },
+        { src: "img/slider/slide3.png", text: "En cliquant sur une station, un encart à droite permet de voir les infos de la stations. Vous pouvez les recharger ou réserver un vélo." },
+        { src: "img/slider/slide4.png", text: "En cliquant sur le bouton \"reserver\" un nouveau cadre apparaît. Entrez votre nom et prénom et signer pour valider la réservation." },
+        { src: "img/slider/slide5.png", text: "Une fois la réservation effectué, vous retrouverez toutes les infos de la réservation en bas de l'écran." },]
     );
     
     $(document).on("keydown", function(e)

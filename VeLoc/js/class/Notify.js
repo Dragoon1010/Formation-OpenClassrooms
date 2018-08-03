@@ -63,12 +63,22 @@ function notify(type, position1, position2, text)
     }
     else if(Notification.permission === "granted") // Si le navigateur prend en charge les navigation et que l'utilisateur accepte les notifications, alors on lui affiche.
     {
-        notify = new Notification(text);
-        
-        setTimeout(function()
+        try
         {
-            notify.close();
-        }, 5000);
+            notify = new Notification(text);
+        
+            setTimeout(function()
+            {
+                notify.close();
+            }, 5000); 
+        }
+        catch(error)
+        {
+            console.log(error);
+            notify = new Notify(type, position1, position2, text);
+            notify.create();
+        }
+
     }
     else if(Notification.permission === "denied")
     {

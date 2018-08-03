@@ -119,10 +119,22 @@ button {
 }
 
 /* HEADER CSS */
+header #logo {
+  font-size: 2em;
+  width: 100%;
+  margin: 0;
+  margin-left: 5%;
+}
+
+header #logo #logo-text {
+  margin-left: 1%;
+  font-family: 'Permanent Marker', cursive;
+}
+
 header #slideshow {
   position: relative;
   overflow: hidden;
-  height: 46vw;
+  height: 35vw;
   width: 90%;
   margin: 1% auto;
 }
@@ -130,9 +142,20 @@ header #slideshow {
 header #slideshow .slide {
   position: absolute;
   transition: all 3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+header #slideshow .slide img {
   border-color: #5cadd3;
   border-width: 2px;
   border-style: solid;
+  max-height: 35vw;
+}
+
+header #slideshow .slide figcaption {
+  text-align: center;
+  display: none;
 }
 
 header #slide-selector {
