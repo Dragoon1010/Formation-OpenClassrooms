@@ -1,0 +1,327 @@
+
+/* Media querie dédié à tout les affichage en dessous de 1200px, comprend les propriétés globales */
+@media screen and (max-width: 1200px) 
+{ 
+  :target:before /* permet d'ajuster la hauteur des ancre pour la navigation fixe */
+  {
+    height: 70px;
+    margin: -70px 0 0 0;
+  }
+  
+  .description,
+  #services-full #service-aside,
+  #nav-internal ul
+  {
+    width: 100%;
+  }
+  
+  header
+  {
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .main-section
+  {
+    height: auto;
+  }
+  
+  #logo
+  {
+    height: 40px;
+    width: 42px;
+    overflow: hidden;
+    position: absolute;
+    margin-left: 1%;
+  }
+  
+  #logo img
+  {
+    height: 30px;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+  
+  #nav-header
+  {
+    width: 100%;
+    margin: 0;
+  }
+  
+  #nav-header ul
+  {
+    padding: 0;
+  }
+  
+  #nav-header ul li
+  {
+    padding: 0 3%;
+  }
+  
+  #nav-header ul li a
+  {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  #slider
+  {
+    flex-direction: column;
+    margin: 40px auto 0 auto;
+    min-height: 350px;
+  }
+  
+  #slider figcaption
+  {
+    width: 100%;
+    margin: 0 2%;
+  }
+  
+  #slider #element-1,
+  #slider #element-2
+  {
+    margin-left: 0;
+    animation: none;
+    width: 100%;
+    min-height: 350px;
+    background-position: right;
+  }
+  
+  #slider-position,
+  #slider #element-2,
+  .fa-angle-right,
+  .fa-angle-left
+  {
+    display: none;
+  }
+  
+  #nav-internal ul
+  {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .item h3
+  {
+    font-size: 1em;
+  }
+  
+  #formulaire h3
+  {
+    font-size: 1.5em;
+  }
+}
+
+/* Media querie dédié à tout les affichage en dessous de 736px, comprend les propriétés globales pour cette taille */
+
+@media screen and (max-width: 736px)
+{
+  p
+  {
+    font-size: 0.9em;
+  }
+  
+  ul li a
+  {
+    font-size: 0.7em;
+  }
+  
+  #nav-header
+  {
+    width: 85%;
+  }
+  
+  header nav ul li a
+  {
+    padding: 0;
+  }
+  
+  #slider
+  {
+    flex-direction: column;
+    margin: 43px auto 0 auto;
+    min-height: 200px;
+  }
+  
+  #slider #element-1,
+  #slider #element-2
+  {
+    min-height: 200px;
+    animation: none;
+  }
+  
+  #slider h1
+  {
+    font-size: 1em;
+  }
+  
+  #slider h1, #slider p
+  {
+    margin: 1%;
+  }
+  
+  #slider figcaption
+  {
+    text-align: center;
+    height: auto;
+    position: absolute;
+    bottom: 5%;
+    text-shadow: 2px 2px 3px #000;
+    margin: 0;
+  }
+  
+  #slider figcaption button 
+  {
+    width: 80%;
+    margin: 2% auto;
+  }
+  
+  #services-full::before
+  {
+    display: none;
+  }
+  
+  .border-icon
+  {
+    padding: 10px;
+    margin-left: -4%;
+  }
+  
+  .border-icon span
+  {
+    font-size: 0.5em;
+  }
+  
+  .border-icon::after
+  {
+    right: -15%;
+    top: 0%;
+    font-size: 1.22em;
+  }
+  
+  #nav-internal ul li a.sub-active::after
+  {
+    font-size: 1.3em;
+  }
+  
+  #contact-section
+  {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  #contact-section #color-map
+  {
+    position: relative;
+  }
+ 
+  #formulaire
+  {
+    width: 90%;
+    padding: 5%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+/* Media querie dédié aux affichages compris entre 1000px et 1200px */
+@media screen and (min-width: 1000px) and (max-width: 1200px)
+{
+  .list-items .item
+  {
+    width: 20%;
+    margin: 2%;
+  }
+  
+  #contact-section iframe
+  {
+    position: relative;
+  }
+}
+
+/* Media querie dédié aux affichages compris entre 736px et 1000px */
+@media screen and (min-width: 736px) and (max-width: 1000px) 
+{
+  #services-full
+  {
+    flex-direction: column;
+  }
+  
+  #services-full #service-aside,
+  {
+    width: 100%;
+  }
+  
+  .description
+  {
+    width: 100%;
+  }
+  
+  .list-items .item
+  {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  
+  #contact-section
+  {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  #contact-section #color-map
+  {
+    position: relative;
+  }
+  
+  #formulaire
+  {
+    width: 90%;
+    padding: 5%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+/* Media querie dédié aux affichages compris entre 500px et 736px */
+@media screen and (min-width: 500px) and (max-width: 736px)
+{
+  .list-items .item
+  {
+    width: 45%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  
+  #more-infos 
+  {
+    margin: auto;
+  }
+}
+
+/* Media querie dédié aux affichages inférieure à 500px */
+@media screen and (max-width: 500px)
+{
+  .list-items .item
+  {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  
+  .circle
+  {
+    font-size: 5vw;
+  }
+  
+  #more-infos 
+  {
+    margin: auto;
+  }
+}
+
+

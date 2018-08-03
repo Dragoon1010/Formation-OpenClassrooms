@@ -1,0 +1,292 @@
+<!DOCTYPE html> <!-- HTML 5 -->
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" /> <!-- Premières balises dédiés au charset, viewport, description et nom -->
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="WebAgency s'occupe de toutes les phases de création de votre site web, de A à Z !" />
+        <title>WebAgency : La communication au plus près de vous</title>
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary"/>
+
+        <!-- Open Graph (Facebook & Twitter) -->
+        <meta property="og:title" content="WebAgency" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://jrw-prod.fr/Projects/WebAgency/index.html" />
+        <meta property="og:image" content="http://jrw-prod.fr/Projects/WebAgency/img/logo.png" />
+        <meta property="og:description" content="WebAgency: La communication au plus près de vous" />
+
+        <!-- CSS de reset des propriétés pour chaque navigateur + Google Font Roboto + CSS Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        
+        <!-- CSS de la page classique + un fichier séparé pour le responsive -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    </head>
+    <body>
+
+        <!-- header de la page -->
+        <header>
+            <!-- logo de la web agency -->
+            <div id="logo">
+                <a href="#"><img src="img/logo.png" alt="Logo de la WebAgency" title="Logo de la WebAgency"/></a>
+            </div>
+            <!-- Barre de navigation -->
+            <nav id="nav-header">
+                <ul>
+                    <li class="active"><a href="#slider">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projets">PortFolio</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- slider de la page -->
+        <section id="slider">
+
+            <label for="left_button" class="fas fa-angle-left">Left slider</label> <!-- Flèche à gauche -->
+            <input type="radio" id="left_button" name="button" checked>
+
+            <figure class="slider-element" id="element-1">
+                <figcaption>
+                    <h1><em>WebAgency</em> : L'agence de tout vos projets !</h1>
+                    <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                    <input type="button" id="more-infos" name="more-infos" value="plus d'infos">
+                </figcaption>
+            </figure>
+            <figure class="slider-element" id="element-2">
+                <figcaption>
+                    <h1><em>Du prototypage</em> à la conception</h1>
+                    <p>WebAgency s'occupe de toutes les phases de création de votre site web, de A à Z !</p>
+                </figcaption>
+            </figure>
+
+
+            <label for="right_button" class="fas fa-angle-right">Right Slider</label> <!-- Flèche à droite -->
+            <input type="radio" id="right_button" name="button">
+        
+            <div id="slider-position"></div>
+        </section>
+
+        <!-- contenu de la page -->
+        <section id="content">
+            <h1 class="screen-readers">Contenu</h1>
+            <!-- page de description des services -->
+            <section id ="services-section" class="main-section">
+                <h2 class="screen-readers">Service</h2>
+                <section class="description">
+                    <h3 id="services">NOS SERVICES</h3>
+                    <span class="circle">&#9679;</span>
+                    <p>Notre coeur de métier s'articule autour du développement de plateformes web prêtes à l'emploi. Utilisant des
+                    technologies toujours à la pointe de l'évolution, nous développons des plateformes E-Commerce, Blogs, sites vitrine, 
+                    applications web et bien d'autres choses.
+                    </p>
+                </section>
+                <section id="services-full">
+                    <div id="service-aside">
+                        <div class="service-item">
+                            <div class="border-icon">
+                                <span class="fas fa-chart-line services-icon"></span>
+                            </div>
+                            <div id="ux-item"> <!-- Item de UX Design -->
+                                <h4>UX Design</h4>
+                                <p>L'expérience utilisateur est une chose très importante sur internet. C'est pour cette raison que nous avons une équipe
+                                entièrement dédié à l'analyser et au prototypage de l'interface de vos site. Nos sites doivent respecter une charte
+                                d'utlisation précise, liant ergonomie, fluidité, accessibilité et responsive-design.
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="service-item"> 
+                            <div class="border-icon">
+                                <span class="fas fa-cubes services-icon"></span>
+                            </div>
+                            <div id="ui-item"> <!-- Item de UI Design -->
+                                <h4>UI Design</h4>
+                                <p>Un site se doit d'être attirant. Chez WebAgency, nous possédons une équipe dédié à la réalisation de vos maquettes
+                                tout en s'assurant de respecter vos critère en matière de design. Chacun de nos site est unique grace à une équipe 
+                                dynamique et pleine de talent.
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="service-item">
+                            <div class="border-icon">
+                                <span class="fas fa-chart-area services-icon"></span>
+                            </div>
+                            <div id="seo-item"> <!-- Item du SEO -->
+                                <h4>SEO</h4>
+                                <p>Avoir un beau site c'est une chose, mais cela n'est pas très utile si il n'est pas visible sur le web. Nous travaillons
+                                avec plusieurs partenaires expert en SEO, pour vous assurer un référencement à la pointe des normes en vigueur, 
+                                pour une visibilté maximale !
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- listing des projets -->
+            <section id="projects-section" class="main-section">
+                <h2 class="screen-readers">Projet</h2>
+                <section class="description">
+                    <h3 id="projets">NOS PROJETS</h3>
+                    <span class="circle">&#9679;</span>
+                    <p>Vous pouvez retrouver en dessous tout les projets créé en interne par la WebAgency. Pour plus d'informations,
+                    n'hésitez pas à utiliser le formulaire de contact.
+                    </p>
+                </section>
+                <aside>
+                    <!-- navigation interne aux projets -->
+                    <nav id="nav-internal">
+                        <ul>
+                            <li><a class="sub-active" href="#">Tout voir</a></li>
+                            <li><a href="#">Creatif</a></li>
+                            <li><a href="#">Entreprise</a></li>
+                            <li><a href="#">PortFolio</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Liste de projets de l'entreprise -->
+                    <section id="portfolio">
+                        <h3 class="screen-readers">Portfolio</h3>
+                        <section class="list-items">
+                            <h4 class="screen-readers">Liste d'items</h4>
+                            <figure class="item" id="item-1"> <!-- Item 1 -->
+                                <img src="img/portfolio/01.jpg" alt="Le Lunettiste" title="Le Lunettiste" />
+                                <figcaption class="item-infos">
+                                    <h3>Le Lunettiste</h3>
+                                    <span>Site responsive design développé pour "Le Lunettiste".
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-2"> <!-- Item 2 -->
+                                <img src="img/portfolio/02.jpg" alt="Indie Gaming" title="Indie Gaming" />
+                                <figcaption class="item-infos">
+                                    <h3>Indie Gaming</h3>
+                                    <span>Le site très fréquenté de la Indie Gaming Association.
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-3"> <!-- Item 3 -->
+                                    <img src="img/portfolio/03.jpg" alt="Pompadour" title="Pompadour" />
+                                <figcaption class="item-infos">
+                                    <h3>Pompadour</h3>
+                                    <span>Site très fluide, très riche en éléments graphiques.
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-4"> <!-- Item 4 -->
+                                <img src="img/portfolio/04.jpg" alt="3D Factory" title="3D Factory" />
+                                <figcaption class="item-infos">
+                                    <h3>3D Factory</h3>
+                                    <span>Site destiné à l'mpresssion 3D avec intégration de modèles 3D dans la page.
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-5"> <!-- Item 5 -->
+                                <img src="img/portfolio/05.jpg" alt="Shopping Mall" title="Shopping Mall" />
+                                <figcaption  class="item-infos">
+                                    <h3>Shopping Mall</h3>
+                                    <span>La boutique des réductions à 50% toute l'année.
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-6"> <!-- Item 6 -->
+                                <img src="img/portfolio/06.jpg" alt="BTP origin" title="BTP origin" />
+                                <figcaption class="item-infos">
+                                    <h3>BTP origin</h3>
+                                    <span>Site d'une entreprise de BTP innovante situé en région Française.
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-7"> <!-- Item 7 -->
+                                <img src="img/portfolio/07.jpg" alt="Caligraphique" title="Caligraphique" />
+                                <figcaption class="item-infos">
+                                    <h3>Caligraphique</h3>
+                                    <span>Port-folio professionnel d'un talentueux dessinateur.
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-8"> <!-- Item 8 -->
+                                <img src="img/portfolio/08.jpg" alt="Goodies &amp; Co" title="Goodies &amp; Co" />
+                                <figcaption class="item-infos">
+                                    <h3>Goodies &amp; Co</h3>
+                                    <span>Site de E-Commerce d'objets en tout genres.
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                            <figure class="item" id="item-9"> <!-- Item 9 -->
+                                <img src="img/portfolio/full.jpg" alt="Food Factory" title="Food Factory" />
+                                <figcaption class="item-infos">
+                                    <h3>Food Factory</h3>
+                                    <span>Site multilangue de la très célèbre émission "Food Factory".
+                                    </span>
+                                    <a href="#"><span class="far fa-eye eye-icon"></span></a>
+                                </figcaption>
+                            </figure>
+                        </section>
+                    </section>
+                </aside> 
+            </section>
+            
+            <!-- Formulaire de contact -->
+            <section id="contact-section" class="main-section">
+                <div id="color-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDE2ufVCzwa7JwpPEQ575F-iONLJf5AC74&q=25+Rue+d'Hauteville,+75010+Paris&attribution_source=Google+Maps+Embed+API&attribution_web_url=https://www.openclassroom.com" 
+                        width="600" 
+                        height="450" 
+                        style="border:0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <h2 class="screen-readers">heading</h2>
+                <div id="formulaire">
+                    <h3 id="contact-info">Contact Info</h3>
+                    <p id="adress">
+                        WebAgency SAS<br />
+                        25 Rue d'Hauteville 75010 Paris<br />
+                        Tel : 01 02 03 04 05
+                    </p>
+                    <form method="POST" action="contact.php">
+                        <input type="text" name="name" id="name" maxlength="50" placeholder="Nom" />
+                        <label for="name" class="screen-readers">name</label>
+
+                        <input type="email" name="email" id="email" maxlength="50" placeholder="Email" />
+                        <label for="email" class="screen-readers">email</label>
+
+                        <input type="text" name="subject" id="subject" placeholder="Sujet" />
+                        <label for="subject" class="screen-readers">subject</label>
+
+                        <textarea id="message" name="message" maxlength="500" placeholder="Message" ></textarea>
+                        <label for="message" class="screen-readers">message</label>
+
+                        <input type="submit" value="Envoyer" />
+                    </form>
+                </div>
+            </section>
+        </section>
+        <footer style="display: none;">
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww.jrw-prod.fr%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=">
+                    <img style="border:0;width:88px;height:31px"
+                        src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                        alt="CSS Valide !" />
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

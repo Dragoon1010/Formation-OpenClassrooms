@@ -1,0 +1,615 @@
+/* GLOBAL ELEMENTS */
+
+body
+{
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3
+{
+ font-size: 2em;   
+}
+
+h4
+{
+    font-size: 1.2em;
+}
+
+p, a, li, html
+{
+    font-family: 'Roboto', sans-serif;
+    color: #696969;
+}
+
+ul li
+{
+    list-style-type: none;
+}
+
+.main-section /* attribué à chacune des sections */
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+    height: 900px;
+}
+
+.description /* Description des sections */
+{
+    display: block;
+    height: 30%;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.eye-icon /* Icônes oeil sur les items */
+{
+    position: absolute;
+    right: 2%;
+    top: -12%;
+    background-color: #5CADD3;
+    padding: 3%;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    color: #FFF;
+}
+
+.screen-readers /* Destiné pour les lecteurs d'écran (cache les balises sémantique pour le W3C) */
+{
+    display: none;
+}
+
+.circle /* Crée des ronds */
+{
+    font-size: 3vw;
+    color: #5CADD3;
+    width: 100%;
+    line-height: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.circle::before, .circle::after /* Crée un tiret avant et après les ronds */
+{
+    content: "";
+    width: 25%;
+    height: 3px;
+    background-color: #C9C9C9;
+    border-radius: 20px;
+}
+
+:target::before /* permet d'ajuster la hauteur des ancre pour la navigation fixe */
+{
+    content: "";
+    display: block;
+    height: 110px;
+    margin: -110px 0 0 0;
+}
+
+/* HEADER SECTION */
+
+#logo
+{
+    float: left;
+    position: relative;
+    margin-left: 12%;
+}
+
+#logo img
+{
+    position: absolute;
+    margin-top: 10px;
+}
+
+header
+{
+    background-color: #FFF;
+    position: fixed;
+    line-height: 80px;
+    vertical-align: middle;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#nav-header /* Barre de navigation principale */
+{
+    width: 20%;
+    float: right;
+    margin: 0% 15% 0% 0%;
+    color: #C9C9C9;
+}
+
+#nav-header ul
+{
+    margin-top: 0;
+    width: 100%;
+    border-top: 3px solid #FFF;
+    
+}
+
+#nav-header ul li
+{
+    padding: 0 10px;
+}
+
+#nav-header ul li a
+{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #898989;
+    width: 100%;
+    height: 100%;
+}
+
+#nav-header ul li .active, /* Effet au survol et sur l'élément actif */
+#nav-header ul li:hover
+{
+    margin-top: -3px;
+    border-top: 3px solid #5CADD3;
+}
+
+#nav-header ul, 
+#nav-internal ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+}
+
+/* SLIDER SECTION */
+
+#slider
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 83px;
+    min-height: 650px;
+}
+
+#slider p
+{
+    color: #FFF;
+}
+
+#slider #element-1 /* Image 1 du slider */
+{
+    margin-left: -100%;
+    width: 100%;
+    height: auto;
+    background-image: url("../img/slider/bg1.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: all ease-in 2s;
+    -webkit-transition: all ease-in 2s;
+}
+
+#slider #element-2 /* Image 2 du slider */
+{
+    width: 100%;
+    height: auto;
+    background-image: url("../img/slider/bg2.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: all ease-in 2s;
+    -webkit-transition: all ease-in 2s;
+}
+
+#slider input[type="radio"] /* Cache les boutons radio du slider */
+{
+    display: none;
+}
+
+#left_button:checked ~ #element-1 /* Animation du slider via les flèches */
+{
+    margin-left: 0%;
+    transition: all ease-in 2s;
+    -webkit-transition: all ease-in 2s;
+}
+
+#slider-position /* Barre d'information sur la position du slider */
+{
+    transition: all ease-in 2s;
+    -webkit-transition: all ease-in 2s;
+}
+
+#right_button:checked ~ #slider-position /* Animation du slider via les flèches */
+{
+    margin-left: +50%;
+    transition: all ease-in 2s;
+    -webkit-transition: all ease-in 2s;
+}
+
+.fa-angle-left::before /* Icône gauche du slider */
+{
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 60px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px; 
+    top: 50%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    color: #FFF;
+    
+    position: absolute;
+    z-index: 1;
+}
+
+.fa-angle-right::before /* Icône droite du slider */
+{
+    font-size: 30px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 60px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px; 
+    top: 50%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    color: #FFF;
+    
+    position: absolute;
+    z-index: 1;
+}
+
+label[for="left_button"],
+label[for="right_button"] /* destiné à l'accessibilité */
+{
+    font-size: 0em;
+}
+
+#more-infos /* Zone d'information des images slider */
+{
+    width: 150px;
+    height: 40px;
+    background-color: #5CADD3;
+    color: white;
+    border: none;
+}
+
+#more-infos:hover
+{
+    background-color: #FFF;
+    color: #5CADD3;
+}
+
+#slider figcaption em 
+{
+    color: #5CADD3;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.slider-element
+{
+    left: 0;
+    top: 0;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.slider-element figcaption
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    width: 27%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+#slider-position 
+{
+    background-color: #5CADD3;
+    height: 5px;
+    width: 50%;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    animation: sliderPositionAnim 12s linear infinite;
+    animation-delay: 6s;
+}
+
+/* SERVICES SECTION */
+
+#services-full
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#services-full::before,
+#services-full #service-aside
+{
+    width: 50%;
+}
+
+#services-full::before /* Image "écran d'ordinateur" */
+{
+    content: "";
+    background-image: url("../img/main-feature.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-item /* Zones de decription (UX, UI, SEO) */
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.border-icon /* Bordure rond des icônes */
+{
+    border: 1px solid #C9C9C9;
+    border-radius: 50%;
+    margin: 2%;
+    padding: 2%;
+    
+    position: relative;
+}
+
+.border-icon::after /* Petit rond après les bordures */
+{
+    content: "\25CF";
+    color: #5CADD3;
+    font-size: 2em;
+    position: absolute;
+    right: -10%;
+    top: 20%;
+    line-height: 50px;
+    margin-left: 10%;
+}
+
+.services-icon::before
+{
+    display: block;
+    font-size:3em;
+    color: #5CADD3;
+}
+
+/* PROJECT SECTION */
+
+#projects-section
+{
+    background-color: #FEFDF0;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 50px;
+}
+
+#nav-internal /* Barre de navigation interne (secondaire) */
+{
+    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-internal ul
+{
+    width: 30%;
+    justify-content: center;
+    padding: 0;
+    background-color: #d3cfcf;
+    border-bottom: 5px solid #C9C9C9;
+    border-radius: 5px;
+}
+
+#nav-internal ul li
+{
+    width: 25%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+}
+
+#nav-internal ul li a
+{
+    position: relative;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 10px;
+    color: #696969;
+    width: 100%;
+    height: 100%;
+}
+
+#nav-internal ul li a.sub-active, /* Effet au survol et sur l'élément actif de la barre de navigation secondaire */
+#nav-internal ul li a:hover
+{
+    background-color: #5CADD3;
+    border-bottom: 5px solid #4C8DB3;
+    transition: none;
+    -webkit-transition: none;
+    color: #FFF;
+}
+
+#nav-internal ul li a.sub-active::after /* Petite flèches en dessous de l'élément actif */
+{
+    content: "\25BC";
+    color : #4C8DB3;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+}
+
+#nav-internal ul li:first-child a /* Bordure arrondi sur le premier élément */
+{
+    border-radius: 5px 0px 0px 5px;
+}
+
+#nav-internal ul li:last-child a /* Bordure arrondi sur le dernier élément */
+{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.list-items
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.item /* Items du portfolio */
+{
+   width: 20%;
+   margin: 1%;
+   overflow: hidden;
+   position: relative;
+   z-index: 1;
+}
+
+.item:nth-of-type(n+9) /* Cache tout ce qui est au dessus de 8 éléments */
+{
+    display: none;
+}
+
+.item h3
+{
+    font-size: 1.3em;
+}
+
+.item-infos /* Information d'un item */
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    position: absolute;
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.item:hover .item-infos
+{   
+    margin-top: -40%;
+    z-index: 2;
+    overflow: visible;
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+}
+
+.item-infos h3, 
+.item-infos span
+{
+    margin: 3%;
+    display: block;
+}
+
+.item-infos span
+{
+    font-size: 0.8em;
+}
+
+.item img
+{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+/* CONTACT SECTION */
+
+#contact-section 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: 100%;
+    min-height: 900px;
+}
+
+#color-map /* Couleur bleu au dessus de la map (en transparence) */
+{
+    position: absolute;
+    background-color: rgba(0, 180, 2310, 0.4);
+    width: 100%;
+    min-height: 900px;
+    z-index: 1;
+}
+
+#contact-section iframe /* Map Google (en transparence) */
+{
+    position: absolute;
+    opacity: 0.6;
+    width: 100%;
+    min-height: 900px;
+}
+
+#formulaire /* Formulaire de contact */
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 10%;
+    padding: 1%;
+    height: 550px;
+    z-index: 2;
+}
+
+#formulaire h3
+{
+    margin: 0;
+}
+
+#contact-section input
+{
+    border: 1px solid #5CADD3;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px 5px 0px;
+}
+
+#contact-section textarea
+{
+    border: 1px solid #5CADD3;
+    border-radius: 5px;
+    width: 99%;
+    height: 200px;
+    margin: 5px 0px 5px 0px;
+    resize: none;
+}
+
+#contact-section input[type="submit"] /* Bouton envoyer */
+{
+    background-color: #5CADD3;
+    color: #FFF;
+    width: 40%;
+    font-size: 1em;
+}

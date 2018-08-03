@@ -1,0 +1,362 @@
+/*
+Theme Name: NepalBuzz-child
+Template: nepalbuzz
+Theme URI: https://catchthemes.com/themes/nepalbuzz/
+Author: Catch Themes
+Author URI: https://catchthemes.com/
+Description: NepalBuzz, the WordPress Theme for Magazine and Blogs represents simplicity and clarity. NepalBuzz is completely responsive and minimalistic, all you need for magazine and blog websites. It is clean, super user-friendly and built using the HTML5 and CSS3 codes, it is so stress-free to maneuver around that your clients will be fully satisfied with your websiteâ€™s utility. Take control of everything in your site, from placements to font colors. Its vast range of features make it adept to be used in almost any site. With NepalBuzz, create an individual online presence and build your clientele. NepalBuzz takes care of everything. This theme is translation ready. Check out Theme Instructions at https://catchthemes.com/theme-instructions/nepalbuzz/, Support at https://catchthemes.com/support/ and Demo at https://catchthemes.com/demo/nepalbuzz/
+Version: 1.0.3
+License: GNU General Public License, version 3 (GPLv3)
+License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+Text Domain: nepalbuzz
+Domain Path: /languages/
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+
+/* Changement de couleur sur tout les élément rouge (passage en orange) */
+
+.nepalbuzz-nav-menu .current-menu-item a, 
+.nepalbuzz-nav-menu .current-menu-ancestor a, 
+.nepalbuzz-nav-menu .current_page_item a, 
+.nepalbuzz-nav-menu .current_page_ancestor a,
+.nepalbuzz-nav-menu a:hover, 
+.nepalbuzz-nav-menu a:focus,
+#search-toggle:hover, 
+#search-toggle:focus,
+#breadcrumb-list a, 
+#breadcrumb-list a span,
+.entry-title a:hover, 
+.entry-title a:focus, 
+.entry-meta a:hover, 
+.entry-meta a:focus,
+.more-button a:hover, 
+.more-button a:focus,
+a:hover, a:focus, a:active
+{
+	color: #e0750b;
+}
+
+.site-main .hentry, 
+.archive .page-header, 
+.search-results,
+.page-header, 
+.widget
+{
+	border-color: #e0750b;
+}
+
+.posts-navigation .nav-links a:hover, 
+.posts-navigation .nav-links a:focus, 
+.pagination .nav-links a:hover, 
+.pagination .nav-links a:focus, 
+.pagination .nav-links .current, 
+.site-main #infinite-handle span button:hover, 
+.site-main #infinite-handle span button:focus, 
+.woocommerce nav.woocommerce-pagination ul li a:focus, 
+.woocommerce nav.woocommerce-pagination ul li a:hover, 
+.woocommerce nav.woocommerce-pagination ul li span.current, 
+.site-main .page-links span, 
+.site-main .page-links a:hover, 
+.site-main .page-links a:focus, 
+.site-main .page-links a:hover span,
+.page-links a:focus span,
+button:hover, 
+input[type="button"]:hover, 
+input[type="reset"]:hover, 
+input[type="submit"]:hover
+{
+	background-color: #e0750b;
+}
+
+#primary-menu .nepalbuzz-nav-menu li:first-child a::before /* icone maison au premier élément */
+{
+	content: "\f015";
+	font-family: "FontAwesome";
+	margin-right: 10px;
+	font-size: 1.5em;
+	line-height: 0.6em;
+}
+
+#primary-menu 
+{
+    position: absolute;
+    right: 3%;
+}
+
+/* Changement des dimensions des éléménts du site (wrapper et sidebar) */
+
+.layout-one-column .content-area
+{
+	max-width: 80%;
+}
+
+.layout-two-columns .wrapper, .layout-two-columns .slider-content-wrapper
+{
+	width: 90%;
+}
+
+.layout-two-columns .content-area
+{
+	width: 69%;
+}
+
+.sidebar-primary
+{
+	width: 29%;
+}
+
+.items-list
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.items-list .post
+{
+	width: 49%;
+}
+
+.page-header
+{
+	width: 100%;
+	display: block;
+}
+
+.custom-header-content
+{
+	height: 620px;
+	max-width: 100%;
+	width: 100%;
+}
+
+.post-template-default 
+{
+	width: 100%;
+}
+
+.nav-previous, .nav-next /* ajout d'un fond de couleur */
+{
+	background-color: #e0750b;
+	transition: background-color 1s ease;
+	border-radius: 2px;
+	max-width: 30%;
+}
+
+.nav-previous:hover, .nav-next:hover
+{
+	background-color: #000;
+	transition: background-color 1s ease;
+}
+
+.nav-previous a, .nav-next a
+{
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+/* mise en page tableau */
+
+.events-table
+{
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+}
+
+.events-table tr td span 
+{
+    display: flex;
+    flex-direction: row;
+}
+.css-events-list table.events-table th.event-time
+{
+	width: 20%;
+}
+.css-events-list table.events-table td:first-child
+{
+	line-height: auto;
+}
+.css-events-list table.events-table td:nth-child(n+2)
+{
+	line-height: 100px;
+}
+
+.event-reservation
+{
+	min-width: 30%;
+}
+
+thead tr th
+{
+	background-color: #e0750b;
+	color: #FFF;
+	text-align: center;
+}
+
+tr:nth-of-type(odd)
+{
+	background-color: #e9e9e9;
+}
+
+tr:hover
+{
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #000;
+}
+
+.site-main .entry-content tr td a
+{
+	display: block;
+	width: 90%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: green;
+	color: #FFF;
+	border-radius: 5px;
+	margin: auto;
+}
+
+.site-main .entry-content tr td a:hover
+{
+	background-color: #E0750B;
+	color: #FFF;
+}
+
+/* mise en page formulaire de contact */
+
+.wpcf7-form
+{
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.wpcf7-form p
+{
+	width: 48%;
+	margin: 1%;
+	padding: 1%;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 1px solid #e0750b;
+	border-radius: 5px;
+}
+
+.wpcf7-form input
+{
+	width: 100%;
+}
+.wpcf7-form select
+{
+	padding: 9px 35px 9px 0;
+	width: 100%;
+}
+
+.wpcf7-form-control-wrap.consentement {
+    float: left;
+    margin-right: 10px;
+}
+
+label[for="consentement"] br {
+    display: none;
+}
+
+.wpcf7-form p:nth-last-child(-n+4)
+{
+	width: 100%;
+}
+
+/* Animation CSS3 */
+
+.featured-image
+{
+	overflow: hidden;
+}
+
+.featured-image a img
+{
+	transition: 1s ease;
+}
+
+.featured-image a:hover img
+{
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg) scale(1.1);
+	
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-ms-filter: blur(2px);
+	-o-filter: blur(2px);
+	filter: blur(2px);
+	
+	transition: 1s ease;
+}
+
+/* responsive design des éléments modifié */
+
+@media screen and (max-width: 959px) 
+{
+
+	.site .nepalbuzz-nav-menu li:first-child a::before /* icone maison au premier élément */
+	{
+		display: none;
+	}
+
+	#primary-menu
+	{
+		position: relative;
+	}
+
+	.layout-two-columns .content-area, 
+	.site-content .sidebar-primary, 
+	.site-content .sidebar-primary section
+	{
+		width: 100%;
+	}
+	
+	.nav-previous, .nav-next
+	{
+		max-width: 50%;
+	}
+	
+	.wpcf7-form p
+	{
+		width: 100%;
+		margin: 1%;
+	}
+
+}
+@media screen and (max-width: 1200px) 
+{
+	.events-table thead
+	{
+		display: none;
+	}
+	tbody tr 
+	{
+		margin-bottom: 50px;
+		display: block;
+	}
+	tbody tr td:last-child 
+	{
+    	min-width: 25%;
+	}
+	tbody tr td 
+	{
+		display: flex;
+		justify-content: center;
+		height: 80px;
+		line-height: 80px;
+	}
+}
