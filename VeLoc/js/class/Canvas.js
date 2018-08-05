@@ -88,7 +88,7 @@ class Canvas
         {
             e.preventDefault();
             
-            if(!$("#reservation-name").val() || !$("#reservation-surname").val() || pixelMoveCount < 50)
+            if(!$("#reservation-name").val() || !$("#reservation-surname").val() || pixelMoveCount < 25)
             {
                 $("#reservation-error").text("Vous devez remplir tout les champs et signer").css("color", "red");
             }

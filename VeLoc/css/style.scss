@@ -143,10 +143,15 @@ header
 {
     #logo 
     {
-        font-size: 2em;
         width: 100%;
-        margin: 0;
-        margin-left: 5%;
+        height: 2em;
+        margin: auto;
+        background-color: #5CADD3;
+        color: rgb(220, 220, 220);
+        text-shadow: black 1px 1px;
+        line-height: 2em;
+        text-align: center;
+        font-size: 2em;
 
         #logo-text
         {            

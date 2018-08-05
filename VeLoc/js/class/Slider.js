@@ -120,8 +120,17 @@ class Slider
         
         if($nextElt.length !== 0)
             this.replace($nextElt.attr("id"));
+        else
+        {
+            // va vers la carte intéractive après le dernier élément
+            $("body, html").animate( {
+                scrollTop: $("#main").offset().top
+            });
+            
+        }
     }
-
+    
+    // test si le slider est en déplacement ou non.
     move()
     {
         if($(".slide.active").css("left") !== "0px")
