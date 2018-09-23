@@ -1,0 +1,27 @@
+table {
+  background-color: #e6e6e6;
+  width: 100%;
+  margin: 5px 0px; }
+
+table,
+table thead, table tbody,
+table th, table td {
+  border: 3px solid black;
+  border-collapse: collapse; }
+
+.error {
+  background-color: #ffd800;
+  width: 50%;
+  margin: 5px 0px; }
+
+.error,
+.error thead, .error tbody,
+.error th, .error td {
+  border: 3px solid black;
+  border-collapse: collapse; }
+
+.error .error-severity,
+.error .error-message {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,1 +1,5 @@
 Other/
+.idea/
+
+Database.php
+*.odt

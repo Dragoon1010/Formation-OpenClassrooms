@@ -1,0 +1,9 @@
+#fichier .htaccess home
+
+RewriteEngine on
+
+rewriteCond %{REQUEST_FILENAME} !-f
+rewriteCond %{REQUEST_FILENAME} !-d
+rewriteCond %{REQUEST_URI} !^/public/$
+
+rewriteRule ^(.*)$ index.php?action=$1 [NC,L]
