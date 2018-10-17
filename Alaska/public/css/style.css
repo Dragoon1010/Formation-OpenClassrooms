@@ -24,4 +24,8 @@ table th, table td {
 .error .error-message {
   text-align: center; }
 
+.row {
+  margin-right: 2%;
+  margin-left: 2%; }
+
 /*# sourceMappingURL=style.css.map */

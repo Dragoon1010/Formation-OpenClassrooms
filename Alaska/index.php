@@ -14,7 +14,7 @@ require_once('utils.php');
 require('controller/postController.php');
 require('controller/commentController.php');
 require('controller/userController.php');
-require ('controller/adminPanelController.php');
+require('controller/adminPanelController.php');
 
 
 session_start();
@@ -23,7 +23,7 @@ $action = '';
 if(isset($_GET['action']))
 {
     $action = explode('/', strtolower($_GET['action']));
-
+    var_dump($_GET['action']);
     if($action[0] == 'accueil')
     {
         user_ShowIndex();
@@ -222,3 +222,4 @@ else
 {
     user_ShowIndex();
 }
+

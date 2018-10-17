@@ -1,13 +1,8 @@
 # Formation-OpenClassrooms
 Tout mes projet de la formation Open Classrooms
 
-## Preview
+![Project WebAgency](https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/40279556_167092120855236_8997606711573348352_o.jpg)
 
-### Project WebAgency
-![preview-1.jpg](https://github.com/Dragoon1010/formation-OpenClassrooms/blob/master/preview-1.jpg)
+![Project Strasbourg](https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/40433188_167092147521900_4989617654139453440_o.jpg)
 
-### Project Strasbourg
-![preview-2.jpg](https://github.com/Dragoon1010/formation-OpenClassrooms/blob/master/preview-2.jpg)
-
-### Project Velo'v
-![preview-3.jpg](https://github.com/Dragoon1010/formation-OpenClassrooms/blob/master/preview-3.jpg)
+![Project Velo'v](https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/40358135_167092180855230_3527403571588890624_o.jpg)

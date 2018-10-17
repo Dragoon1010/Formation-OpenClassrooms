@@ -7,19 +7,19 @@
  */
 ?>
 
-<section id="comments-list">
+<section class="row col-xl-12 comments-list">
     <?php if (!is_null($comments)) { ?>
         <?php foreach($comments as $comment) { ?>
             <?php $user = $userManager->getUserByNameOrId($comment->getAuthorId()); ?>
-            <section id="single-comment">
-                <h2 id="comment-author"><?= is_null($user) ?  'Auteur inconnu' : $user->getUsername(); ?></h2>
-                <span id="comment-date"><?= $comment->getDateUpdate(); ?></span>
-                <p id="comment-text"><?= $comment->getText(); ?></p>
+            <section class="row col-xl-12 single-comment">
+                <h4 class="col-xl-16 comment-author">Ecrit par <?= is_null($user) ?  'Auteur inconnu' : $user->getUsername(); ?></h4>
+                <span class="col-xl-6 comment-date">le <?= $comment->getDateUpdate(); ?></span>
+                <p class="col-xl-12 comment-text"><?= $comment->getText(); ?></p>
             </section>
         <?php } ?>
     <?php } else { ?>
 
-    <span id="no-comment-error">Il n'y a aucun commentaire pour le moment. Ecrivez en un !</span>
+    <span class="no-comment-error">Il n'y a aucun commentaire pour le moment. Ecrivez en un !</span>
 
     <?php } ?>
 </section>

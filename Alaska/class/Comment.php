@@ -35,6 +35,7 @@ class Comment
 
             if(method_exists($this, $method))
                 $this->$method($value);
+            else throw new Exception(" | " . $method . "() : La méthode invoquée n'existe pas");
         }
     }
 

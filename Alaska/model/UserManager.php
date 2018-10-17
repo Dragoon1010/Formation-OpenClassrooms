@@ -43,8 +43,6 @@ class UserManager extends Database
         $req->bindValue(':avatar', $user->getAvatar());
 
         $req->execute();
-
-        return $req->fetch();
     }
 
     public function deleteUser(User $user)
@@ -66,7 +64,8 @@ class UserManager extends Database
         }
 
         $req->execute();
-        $data = $req->fetch();
+        $data = $req->fetch(PDO::FETCH_ASSOC);
+        $req->closeCursor();
 
         if(is_array($data))
             return new User($data);
@@ -106,7 +105,6 @@ class UserManager extends Database
         {
             array_push($usersList, new User($user));
         }
-
         $req->closeCursor();
 
         return $usersList;

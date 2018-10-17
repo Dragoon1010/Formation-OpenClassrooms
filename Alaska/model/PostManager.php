@@ -58,7 +58,8 @@ class PostManager extends Database
         $req->bindValue(':id', (int)$id);
 
         $req->execute();
-        $data = $req->fetch();
+        $data = $req->fetch(PDO::FETCH_ASSOC);
+        $req->closeCursor();
 
         if(is_array($data))
             return new Post($data);
@@ -74,6 +75,7 @@ class PostManager extends Database
         {
             array_push($postsList, new Post($post));
         }
+        $req->closeCursor();
 
         return $postsList;
     }

@@ -52,7 +52,8 @@ class CommentManager extends Database
         $req->bindValue(':commentId', (int)$commentId);
 
         $req->execute();
-        $data = $req->fetch();
+        $data = $req->fetch(PDO::FETCH_ASSOC);
+        $req->closeCursor();
 
         if(is_array($data))
             return new Comment($data);
@@ -71,6 +72,7 @@ class CommentManager extends Database
         {
             array_push($commentsList, new Comment($comment));
         }
+        $req->closeCursor();
 
         if(!empty($commentsList))
             return $commentsList;
@@ -87,6 +89,7 @@ class CommentManager extends Database
         {
             array_push($commentsList, new Comment($comment));
         }
+        $req->closeCursor();
 
         return $commentsList;
     }

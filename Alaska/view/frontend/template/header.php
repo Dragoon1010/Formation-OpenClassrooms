@@ -13,32 +13,34 @@
         <title><?= isset($title) ? $title : 'Page inconnue' ?></title>
 
         <!-- TINYMCE INTEGRATION -->
-        <script src="/Projects/Alaska/public/inc/js/tinymce/tinymce.min.js"></script>
+        <script src="/alaska/public/inc/js/tinymce/tinymce.min.js"></script>
 
         <!-- BOOTSTRAP INTEGRATION -->
-        <script src="/Projects/Alaska/public/inc/js/bootstrap/bootstrap.min.js"></script>
-        <link href="/Projects/Alaska/public/inc/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="/alaska/public/inc/js/bootstrap/bootstrap.min.js"></script>
+        <link href="/alaska/public/inc/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
         <!-- MY CSS/JS -->
-        <link href="/Projects/Alaska/public/css/style.css" rel="stylesheet" type="text/css" />
-        <script src="/Projects/Alaska/public/js/main.js"></script>
+        <link href="/alaska/public/css/style.css" rel="stylesheet" type="text/css" />
+        <script src="/alaska/public/js/main.js"></script>
     </head>
     <body id="<?= isset($bodyName) ? $bodyName : 'body' ?>">
-        <header>
-            <img src="#" alt="Logo Billet simple pour l'Alaska" />
-            <ul>
-                <li><a href="/Projects/Alaska/accueil">Accueil</a></li>
-                <li><a href="/Projects/Alaska/articles">Billets de blog</a></li>
-                <li>
-                    <?php
-                    if(isset($_SESSION['user']))
-                        echo '<a href="/Projects/Alaska/compte">Profil</a> ou <a href="/Projects/Alaska/deconnexion">déconnexion</a>';
-                    else
-                        echo '<a href="/Projects/Alaska/connexion">Se connecter</a> ou <a href="/Projects/Alaska/inscription">s\'inscrire</a>';
-                    ?>
+        <header  class="row">
+            <img src="#" alt="Logo Billet simple pour l'Alaska" class="col-xl-4 float-left" />
+            <ul class="row col-xl-6">
+                <li class="col-xl-3"><a href="/alaska/accueil">Accueil</a></li>
+                <li class="col-xl-3"><a href="/alaska/articles">Billets de blog</a></li>
+                <?php if(isset($_SESSION['user'])) { ?>
+                <ul class="col-xl-3">
+                    <li><a href="/alaska/compte">Profil</a></li>
+                    <li><a href="/alaska/deconnexion">déconnexion</a></li>
+                </ul>
+                <?php } else { ?>
+                <li class="col-xl-3">
+                    <a href="/alaska/connexion">Se connecter</a> ou <a href="/alaska/inscription">s\'inscrire</a>
                 </li>
+                <?php } ?>
+                <form class="col-xl-3">
+                    <input type="search" placeholder="rechercher" />
+                </form>
             </ul>
-            <form id="search-module">
-                <input type="search" placeholder="rechercher" />
-            </form>
         </header>

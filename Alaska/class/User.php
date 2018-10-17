@@ -40,6 +40,7 @@ class User
 
             if(method_exists($this, $method))
                 $this->$method($value);
+            else throw new Exception(" | " . $method . "() : La méthode invoquée n'existe pas");
         }
     }
 
@@ -151,8 +152,11 @@ class User
     {
         $groupId = (int) $groupId;
 
-        if($groupId > 0)
-            $this->_groupId = $groupId;
+        if($groupId === 3)
+            $this->_groupId = $this::IS_ADMIN;
+        else if ($groupId === 2)
+            $this->_groupId = $this::IS_AUTHOR;
+        else  $this->_groupId = $this::IS_USER;
     }
 
     /**
